@@ -21,8 +21,6 @@
 #define WASM_OP_NOP			0x01 /* "nop" */
 #define WASM_OP_BLOCK			0x02 /* "block" BLOCKT */
 #define WASM_OP_LOOP			0x03 /* "loop" BLOCKT */
-#define WASM_OP_IF			0x04 /* "if" BLOCKT */
-#define WASM_OP_ELSE			0x05 /* "else" */
 #define WASM_OP_END			0x0B /* "end" */
 #define WASM_OP_BR			0x0C /* "br" LABEL */
 #define WASM_OP_BR_IF			0x0D /* "br_if" LABEL */
@@ -37,8 +35,6 @@
 #define WASM_OP_LOCAL_TEE		0x22 /* "local.tee" LOCAL */
 #define WASM_OP_GLOBAL_GET		0x23 /* "global.get" GLOBAL */
 #define WASM_OP_GLOBAL_SET		0x24 /* "global.set" GLOBAL */
-#define WASM_OP_TABLE_GET		0x25 /* "table.get" TABLE */
-#define WASM_OP_TABLE_SET		0x26 /* "table.set" TABLE */
 #define WASM_OP_I32_LOAD		0x28 /* "i32.load" MEMARG */
 #define WASM_OP_F64_LOAD		0x2B /* "f64.load" MEMARG */
 #define WASM_OP_I32_LOAD8_S		0x2C /* "i32.load8_s" MEMARG */

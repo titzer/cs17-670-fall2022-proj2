@@ -1,5 +1,7 @@
 #pragma once
 
+#define WASM_OP_IF			0x04 /* "if" BLOCKT */
+#define WASM_OP_ELSE			0x05 /* "else" */
 #define WASM_OP_TRY			0x06 /* "try", ImmSigs.BLOCKT */
 #define WASM_OP_CATCH			0x07 /* "catch", ImmSigs.TAG */
 #define WASM_OP_THROW			0x08 /* "throw", ImmSigs.TAG */
@@ -11,6 +13,8 @@
 #define WASM_OP_DELEGATE		0x18 /* "delegate", ImmSigs.NONE */
 #define WASM_OP_CATCH_ALL		0x19 /* "catch_all", ImmSigs.NONE */
 #define WASM_OP_SELECT_T		0x1C /* "select", ImmSigs.VALTS */
+#define WASM_OP_TABLE_GET		0x25 /* "table.get" TABLE */
+#define WASM_OP_TABLE_SET		0x26 /* "table.set" TABLE */
 #define WASM_OP_I64_LOAD		0x29 /* "i64.load", ImmSigs.MEMARG */
 #define WASM_OP_F32_LOAD		0x2A /* "f32.load", ImmSigs.MEMARG */
 #define WASM_OP_I64_LOAD8_S		0x30 /* "i64.load8_s", ImmSigs.MEMARG */
