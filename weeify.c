@@ -114,7 +114,7 @@ void emit_from(int out_fd, const byte* start, buffer_t* buf) {
 
 off_t emit_reserved_length(int out_fd) {
   off_t before = lseek(out_fd, 0, SEEK_CUR);
-  TRACE("  reserve 5 byte LEB for length @ %lld\n", before);
+  TRACE("  reserve 5 byte LEB for length @ %lld\n", (long long)before);
   emit_u32leb5(out_fd, 0);
   return before;
 }
@@ -122,7 +122,7 @@ off_t emit_reserved_length(int out_fd) {
 void emit_patched_length(int out_fd, off_t before) {
   off_t cur = lseek(out_fd, 0, SEEK_CUR);
   off_t diff = cur - before - 5;
-  TRACE("  patch 5 byte LEB for length @ %lld = %lld\n", before, diff);
+  TRACE("  patch 5 byte LEB for length @ %lld = %lld\n", (long long)before, (long long)diff);
   lseek(out_fd, before, SEEK_SET);
   emit_u32leb5(out_fd, diff);
   lseek(out_fd, cur, SEEK_SET);
